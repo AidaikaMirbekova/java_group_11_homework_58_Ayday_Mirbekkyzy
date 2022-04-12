@@ -14,7 +14,8 @@ const Post = {
     author: User,
     image: 'horror.jpg',
     description: 'Hello',
-    date: "2022-05-04"};
+    date: "2022-05-04"
+};
 
 //Создан объект Класса коментарий. Он также будет ссылатся единственного пользователя.
 const Comment = {
@@ -63,14 +64,14 @@ function createCommentElement(Comment) {
 function createPostElement(Post) {
     const element = document.createElement("div");
     element.className = "post"
-    element.innerHTML = `<th class="image">Image: ${Post.image}</th>
-<th class="description">Description: ${Post.description}</th>
-<th>Date: ${Post.date}</th>
-<th class="user">Author: ${Post.author.login}, email: ${Post.author.email}, name: ${Post.author.username}</th>`;
-    return element;}
+    element.innerHTML = `<div class="image">Image: ${Post.image}</div>
+<div class="description">Description: ${Post.description}</div>
+<div>Date: ${Post.date}</div>
+<div class="user">Author: ${Post.author.login}, email: ${Post.author.email}, name: ${Post.author.username}</div>`;
+    return element;
+}
 
-
-
-
-
+let commentsNode = document.querySelector('.comments');
+console.log(commentsNode)
+commentsNode.append(createCommentElement(Comment));
 
