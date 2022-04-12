@@ -47,6 +47,18 @@ function changeAutorizedStatus(user) {
 
 changeAutorizedStatus(User);
 
+//lesson 58
+function createCommentElement(Comment) {
+    // const elem = document.getElementsByClassName("comment");
+    const element = document.createElement("div");
+    element.className = "comment";
+    // const com = elem.innerHTML;
+    element.innerHTML = `<div class="text">comment: ${Comment.commentText}</div>
+<div>Date: ${Comment.date}</div>
+<div class="user">Author: ${Comment.author.login}, email: ${Comment.author.email}, name: ${Comment.author.username}</div>`;
+    return element;
+}
+
 
 
 
