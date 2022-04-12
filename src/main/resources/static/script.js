@@ -75,3 +75,13 @@ let commentsNode = document.querySelector('.comments');
 console.log(commentsNode)
 commentsNode.append(createCommentElement(Comment));
 
+
+function addPost(Post) {
+    let postsNode = document.querySelector('.posts');
+    console.log(postsNode)
+    postsNode.append(Post);
+}
+
+
+let post = createPostElement(Post); // element
+addPost(post);
