@@ -60,6 +60,14 @@ function createCommentElement(Comment) {
 }
 
 
+function createPostElement(Post) {
+    const element = document.createElement("div");
+    element.className = "post"
+    element.innerHTML = `<th class="image">Image: ${Post.image}</th>
+<th class="description">Description: ${Post.description}</th>
+<th>Date: ${Post.date}</th>
+<th class="user">Author: ${Post.author.login}, email: ${Post.author.email}, name: ${Post.author.username}</th>`;
+    return element;}
 
 
 
