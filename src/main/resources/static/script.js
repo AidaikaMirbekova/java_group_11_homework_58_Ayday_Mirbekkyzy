@@ -85,3 +85,18 @@ function addPost(Post) {
 
 let post = createPostElement(Post); // element
 addPost(post);
+
+
+function showSplashScreen(){
+const element = document.querySelector(".posts");
+element.innerHTML;
+element.hidden=true;}
+
+function hideSplashScreen(){
+    const element = document.querySelector(".posts");
+    element.innerHTML;
+    element.hidden=false;
+}
+
+showSplashScreen(post);
+hideSplashScreen(post);
